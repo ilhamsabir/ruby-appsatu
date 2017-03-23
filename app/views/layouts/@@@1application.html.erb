@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kodeapp</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if user_signed_in?  %>
+      <ul>
+                <li><a href="/users/sign_out" data-method="delete" data-confirm="Are you sure?"><span class="fa fa-user"></span>Keluar</a></li>
+            <% else %>
+                <li class="<%= is_active?('/users/sign_up') %>"><a href="/users/sign_up"><span class="fa fa-user"></span> Sign Up</a></li>
+                  <li class="<%= is_active?('/users/sign_in') %>"><a href="/users/sign_in"><span class="fa fa-sign-in"></span> Login</a></li>
+                </ul>
+            <% end %>
+    <% if admin_signed_in?  %>
+    <li><a href="/admins/sign_out" data-method="delete" data-confirm="Are you sure?"><span class="fa fa-user"></span>Keluar</a></li>
+    <% else %>
+        <li class="<%= is_active?('/admins/sign_up') %>"><a href="/admins/sign_up"><span class="fa fa-user"></span> Sign Up</a></li>
+          <li class="<%= is_active?('/admins/sign_in') %>"><a href="/admins/sign_in"><span class="fa fa-sign-in"></span> Login</a></li>
+        </ul>
+    <% end %>
+    <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kodeapp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'web/bootstrap', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'web/style', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'web/animate', media: 'all', 'data-turbolinks-track' => true %>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'web/style-magnific-popup.css', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'web/animate', media: 'all', 'data-turbolinks-track' => true %>
+    <!-- Loading Layer Slider -->
+
+    <%= stylesheet_link_tag 'layerslider/layerslider', media: 'all', 'data-turbolinks-track' => true %>
+
+
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- Font Favicon
+<link rel="shortcut icon" href="assets/images/favicon.ico"> -->
+
+
+</head>
+<body>
+<%= render partial: 'partials/header' %>
+
+<%= yield %>
+
+<!--begin footer -->
+   <div class="footer">
+
+       <!--begin container -->
+       <div class="container">
+
+           <!--begin row -->
+           <div class="row">
+
+               <!--begin col-md-12 -->
+               <div class="col-md-12 text-center">
+
+                   <!--begin copyright -->
+                   <div class="copyright">
+                       <p>Copyright © 2015 Spectrum. Designed by <a href="http://themeforest.net/user/bogdan_09/portfolio?ref=bogdan_09" target="_blank">Bogdan Preda</a></p>
+
+                   </div>
+                   <!--end copyright -->
+
+                   <!--begin footer_social -->
+                   <ul class="footer_social">
+                       <li>
+                           <a href="#">
+                               <i class="icon icon-twitter"></i>
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#">
+                               <i class="icon icon-pinterest"></i>
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#">
+                               <i class="icon icon-facebook"></i>
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#">
+                               <i class="icon icon-instagram"></i>
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#">
+                               <i class="icon icon-skype"></i>
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#">
+                               <i class="icon icon-dribble"></i>
+                           </a>
+                       </li>
+                   </ul>
+                   <!--end footer_social -->
+
+               </div>
+               <!--end col-md-6 -->
+
+           </div>
+           <!--end row -->
+
+       </div>
+       <!--end container -->
+
+   </div>
+   <!--end footer -->
+
+
+   <!-- Load JS here for greater good =============================-->
+
+    <%= javascript_include_tag 'web/jquery-1.11.3.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'web/bootstrap.min.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'web/jquery.magnific-popup.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'web/jquery.nav', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'web/jquery.magnific-popup.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'web/jquery.nav', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'web/jquery.scrollTo-min', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'web/SmoothScroll', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'web/wow', 'data-turbolinks-track': 'reload' %>
+
+   <!-- begin layerslider script-->
+
+     <%= javascript_include_tag 'layerslider/greensock', 'data-turbolinks-track': 'reload' %>
+     <%= javascript_include_tag 'layerslider/layerslider.transitions', 'data-turbolinks-track': 'reload' %>
+     <%= javascript_include_tag 'layerslider/layerslider.kreaturamedia.jquery', 'data-turbolinks-track': 'reload' %>
+
+     <!-- begin custom script-->
+
+     <%= javascript_include_tag 'web/custom', 'data-turbolinks-track': 'reload' %>
+     <%= javascript_include_tag 'web/plugins', 'data-turbolinks-track': 'reload' %>
+
+
+</body>
+</html>

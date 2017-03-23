@@ -1,0 +1,1 @@
+json.partial! "berita/beritum", beritum: @beritum

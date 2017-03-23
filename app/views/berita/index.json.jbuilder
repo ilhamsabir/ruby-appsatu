@@ -1,0 +1,1 @@
+json.array! @berita, partial: 'berita/beritum', as: :beritum
